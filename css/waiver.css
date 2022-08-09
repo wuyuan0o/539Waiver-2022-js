@@ -1,0 +1,226 @@
+/* DO NOT TOUCH MODIFY THIS CODE*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+}
+
+header {
+    background-color: white;
+}
+
+header img {
+    border: inherit;
+}
+
+
+/* Problem 1 */
+
+.container {
+    display: grid;
+    grid-template-columns: 100%;
+    width: min(70%, 375px);
+    margin: auto;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.container>figure>img {
+    width: 100%;
+}
+
+
+/* Problem 2 */
+
+@media only screen and (min-width: 650px) {
+    .jump:focus {
+        top: 0;
+    }
+    .container {
+        width: 95%;
+        background-image: url(../images/concrete_seamless.png);
+        grid-template-columns: 25% 25% 25%;
+        justify-content: space-around;
+    }
+    .container>figure:nth-child(odd) {
+        grid-column: 1 / span 2;
+    }
+    .container>figure:nth-child(even) {
+        grid-column: 2 / span 2;
+    }
+}
+
+
+/* Problem 3 */
+
+@media only screen and (min-width: 750px) {
+    .container {
+        grid-template-columns: 20% 20% 20% 20%;
+        justify-content: space-between;
+    }
+    .container>figure:nth-child(odd) {
+        grid-column: 1 / span 2;
+    }
+    .container>figure:nth-child(even) {
+        grid-column: 3 / span 2;
+    }
+    .container>figure:last-child {
+        grid-column-start: 2;
+        grid-column-end: span 2;
+    }
+}
+
+
+/* Problem 4 */
+
+@media only screen and (min-width: 900px) {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .container>figure {
+        width: 20%;
+        order: 0;
+    }
+    .container>figure:nth-child(odd) {
+        width: 20%;
+        order: 0;
+    }
+    .container>figure:nth-child(even) {
+        width: 20%;
+        order: 0;
+    }
+    .container>figure:nth-child(2) {
+        order: 1;
+    }
+    .container>figure:nth-child(4n) {
+        border: solid 10px black;
+        width: 40%;
+    }
+}
+
+
+/* Problem 5 */
+
+@media only screen and (min-width: 1050px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        overflow: hidden;
+        text-align: center;
+    }
+    .container>figure:nth-child(odd) {
+        width: 75%;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        grid-column: 1/ span 1;
+        transform: rotate(-15deg);
+    }
+    .container>figure:nth-child(even) {
+        width: 75%;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        grid-column: 2/span 1;
+        transform: rotate(15deg);
+    }
+    .container>figure:nth-child(2) {
+        order: 0;
+    }
+    .container>figure:nth-child(4n) {
+        border: 2px solid darkgrey;
+        width: 75%;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .container>figure:last-child {
+        margin-top: 0px;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        grid-column-start: span 2;
+        transform: rotate(0deg);
+    }
+}
+
+
+/* Problem 6 */
+
+@keyframes firstimage {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container>figure:first-child {
+    animation: firstimage 10s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .container>figure:first-child {
+        animation: firstimage 10s;
+    }
+}
+
+figure {
+    border: 2px solid darkgrey;
+    margin: 0;
+    background-color: white;
+    padding: 5px;
+}
+
+figcaption {
+    background-color: white;
+    font-size: 1.5em;
+    font-family: Times;
+}
+
+img {
+    box-sizing: border-box;
+    border-bottom: 5px solid blue;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-top: 10px dashed white;
+}
+
+
+/* STUDY THESE LINES CAREFULLY */
+
+.jump {
+    border: 2px solid black;
+    padding: 25px;
+    background-color: white;
+    position: absolute;
+    top: -150px;
+}
+
+h1 {
+    text-align: center;
+    line-height: 2em;
+    color: black;
+    border: 1px solid black;
+    ;
+}
+
+.one-third {
+    display: inline-block;
+    width: 30%
+}
+
+
+/* DO NOT MODIFY THIS FILE.  Make your own. */
